@@ -1,8 +1,9 @@
-package serviceboard.spring.domain.user;
+package serviceboard.spring.domain.post;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import serviceboard.spring.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
@@ -10,11 +11,11 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "board")
+public class Post extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -27,7 +28,7 @@ public class User {
     private String content;
 
     @Builder
-    public User(String name, String password, String content) {
+    public Post(String name, String password, String content) {
         this.name = name;
         this.password = password;
         this.content = content;
