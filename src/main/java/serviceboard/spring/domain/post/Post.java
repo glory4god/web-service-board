@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Post extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -31,6 +31,10 @@ public class Post extends BaseTimeEntity {
     public Post(String name, String password, String content) {
         this.name = name;
         this.password = password;
+        this.content = content;
+    }
+
+    public void update(String content) {
         this.content = content;
     }
 

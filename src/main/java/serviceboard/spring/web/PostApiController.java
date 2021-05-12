@@ -2,21 +2,29 @@ package serviceboard.spring.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import serviceboard.spring.service.get.GetService;
-import serviceboard.spring.service.post.PostService;
+import serviceboard.spring.service.GetService;
+import serviceboard.spring.service.PostService;
+import serviceboard.spring.web.dto.PostResponseDto;
 import serviceboard.spring.web.dto.PostSaveRequestDto;
+import serviceboard.spring.web.dto.PostUpdateRequestDto;
 
 @RequiredArgsConstructor
 @RestController
 public class PostApiController {
 
     private final PostService postService;
-
     private final GetService getService;
 
-    @PostMapping(value = "/api/board/post",produces = "application/json; charset=utf-8")
-    public Long save(@RequestBody PostSaveRequestDto requestDto) {
-        return postService.save(requestDto);
+    @PostMapping("/api/board/post")
+    public PostResponseDto save(@RequestBody PostSaveRequestDto requestDto) {
+        Long id = postService.save(requestDto);
+        return getService.findById(id);
+    }
+
+    @PutMapping("/api/board/post/{id}")
+    public PostResponseDto update(@PathVariable Long id, @RequestBody PostUpdateRequestDto requestDto) {
+        postService.update(id, requestDto);
+        return getService.findById(id);
     }
 
 }
