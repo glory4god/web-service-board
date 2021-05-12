@@ -1,4 +1,4 @@
-package serviceboard.spring.service.get;
+package serviceboard.spring.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 public class GetService {
+
     private final PostRepository postRepository;
 
     @Transactional(readOnly = true)
@@ -27,6 +28,13 @@ public class GetService {
         Post entity = postRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시물이 없습니다. id=" + id));
         return new PostResponseDto(entity);
+    }
+
+    public String findPasswordById(Long id) {
+        Post entity = postRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("해당 게시물이 없습니다. id=" + id));
+        return entity.getPassword();
+
     }
 
 }
