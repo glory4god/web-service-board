@@ -2,11 +2,11 @@ package serviceboard.spring.web.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import serviceboard.spring.domain.post.Post;
 
-@RequiredArgsConstructor
 @Getter
+@NoArgsConstructor
 public class PostSaveRequestDto {
     private String name;
     private String password;
