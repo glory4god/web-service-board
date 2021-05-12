@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import serviceboard.spring.service.get.GetService;
+import serviceboard.spring.service.GetService;
 import serviceboard.spring.web.dto.PostListResponseDto;
 import serviceboard.spring.web.dto.PostResponseDto;
 
