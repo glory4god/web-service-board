@@ -23,7 +23,6 @@ public class GetApiController {
 
     @GetMapping("/api/board")
     public List<PostListResponseDto> findAll() {
-
         return getService.findAll();
     }
 

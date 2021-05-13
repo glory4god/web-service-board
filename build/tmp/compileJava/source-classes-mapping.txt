@@ -8,13 +8,12 @@ serviceboard/spring/web/dto/PostSaveRequestDto.java
  serviceboard.spring.web.dto.PostSaveRequestDto$PostSaveRequestDtoBuilder
 serviceboard/spring/domain/post/PostRepository.java
  serviceboard.spring.domain.post.PostRepository
-serviceboard/spring/web/dto/PostUpdateRequestDto.java
- serviceboard.spring.web.dto.PostUpdateRequestDto
- serviceboard.spring.web.dto.PostUpdateRequestDto$PostUpdateRequestDtoBuilder
+serviceboard/spring/service/DeleteService.java
+ serviceboard.spring.service.DeleteService
 serviceboard/spring/web/dto/PostResponseDto.java
  serviceboard.spring.web.dto.PostResponseDto
-serviceboard/spring/service/PostService.java
- serviceboard.spring.service.PostService
+serviceboard/spring/web/DeleteApiController.java
+ serviceboard.spring.web.DeleteApiController
 serviceboard/spring/domain/BaseTimeEntity.java
  serviceboard.spring.domain.BaseTimeEntity
 serviceboard/spring/web/dto/PostListResponseDto.java
@@ -26,9 +25,10 @@ serviceboard/spring/service/GetService.java
  serviceboard.spring.service.GetService
 serviceboard/spring/web/PostApiController.java
  serviceboard.spring.web.PostApiController
-serviceboard/spring/web/DeleteApiController.java
- serviceboard.spring.web.DeleteApiController
-serviceboard/spring/service/DeleteService.java
- serviceboard.spring.service.DeleteService
+serviceboard/spring/web/dto/PostUpdateRequestDto.java
+ serviceboard.spring.web.dto.PostUpdateRequestDto
+ serviceboard.spring.web.dto.PostUpdateRequestDto$PostUpdateRequestDtoBuilder
+serviceboard/spring/service/PostService.java
+ serviceboard.spring.service.PostService
 serviceboard/spring/web/GetApiController.java
  serviceboard.spring.web.GetApiController
